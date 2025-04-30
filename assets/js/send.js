@@ -45,3 +45,15 @@ form.addEventListener("submit", (e) => {
       console.error("Error!", error.message);
     });
 });
+
+// Tahun lahir
+const tahunLahir = 1997;
+
+// Ambil tahun saat ini
+const tahunSekarang = new Date().getFullYear();
+
+// Hitung usia
+const usia = tahunSekarang - tahunLahir;
+
+// Tampilkan usia ke elemen span
+document.getElementById("usia").textContent = usia;
