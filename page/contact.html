@@ -1,0 +1,129 @@
+<section
+  class="min-h-screen bg-body flex items-center justify-center py-10 px-4"
+>
+  <div
+    class="bg-white bg-opacity-90 rounded-3xl shadow-2xl max-w-[90vw] w-full flex flex-col md:flex-row overflow-hidden"
+  >
+    <!-- Optional: Image left (gunakan gambar upload kamu jika mau, atau hapus kolom ini) -->
+    <div
+      class="hidden md:block md:w-1/2 bg-cover bg-center"
+      style="background-image: url('https://picsum.photos/seed/sky/800/600')"
+    ></div>
+    <!-- Form right -->
+    <div class="w-full md:w-1/2 p-8">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-800">
+        Contact Adi Setiawan
+      </h2>
+      <p class="mb-6 text-gray-600 text-sm md:text-base">
+        Ingin kolaborasi, bertanya, atau sekadar menyapa? Kirimkan pesanmu di
+        sini!
+      </p>
+      <form id="myForm" class="space-y-4">
+        <div class="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            name="nama"
+            id="name"
+            class="flex-1 py-3 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-300 outline-none transition bg-white placeholder-gray-400"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="flex-1 py-3 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-300 outline-none transition bg-white placeholder-gray-400"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-300 outline-none transition bg-white placeholder-gray-400"
+          placeholder="Subject"
+          required
+        />
+        <textarea
+          name="pesan"
+          rows="5"
+          class="w-full py-3 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-300 outline-none transition bg-white placeholder-gray-400 resize-none"
+          placeholder="Message"
+          required
+        ></textarea>
+        <div class="my-1">
+          <div id="error_message" class="text-sm text-red-500"></div>
+          <div
+            id="successMsg"
+            class="text-green-600 font-semibold py-2 rounded"
+            style="display: none"
+          >
+            Your message has been sent. Thank you!
+          </div>
+        </div>
+        <div class="flex gap-3 justify-end items-center">
+          <button
+            type="button"
+            disabled
+            id="loading-btn"
+            class="hidden bg-purple-300 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 cursor-not-allowed"
+          >
+            <svg
+              aria-hidden="true"
+              class="animate-spin w-5 h-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+              ></path>
+            </svg>
+            Loading...
+          </button>
+          <button
+            type="submit"
+            id="btn-normal"
+            class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-bold transition"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section
+  class="section min-h-screen flex flex-col justify-between bg-[#E8E8E8]"
+>
+  <!-- Big PORTFOLIO text -->
+  <div class="flex-1 flex items-center justify-center px-4">
+    <div
+      class="relative w-full mx-auto overflow-hidden justify-center items-center flex"
+    >
+      <h1
+        class="font-heading text-[19vw] tracking-[-10px] md:tracking-[-25px] text-black lowercase"
+      >
+        thank you
+      </h1>
+
+      <!-- Nama script merah di atas tulisan portfolio -->
+      <span
+        class="font-sub-heading absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[10vw] text-[#ff3b3b] whitespace-nowrap"
+      >
+        Adi Setiawan
+      </span>
+    </div>
+  </div>
+</section>
