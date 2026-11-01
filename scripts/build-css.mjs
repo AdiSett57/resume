@@ -1,0 +1,12 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { compile } from 'tailwindcss';
+const input = await readFile('index.html', 'utf8');
+const js = await readFile('assets/js/app.js', 'utf8');
+const custom = await readFile('src/custom.css', 'utf8');
+const theme = await readFile('node_modules/tailwindcss/theme.css', 'utf8');
+const preflight = await readFile('node_modules/tailwindcss/preflight.css', 'utf8');
+const source = `${theme}\n${preflight}\n@tailwind utilities;\n${custom}`;
+const candidates = [...new Set((input + js).match(/[!a-zA-Z0-9_:./\[\]%-]+/g) || [])];
+const css = await compile(source);
+await writeFile('assets/css/site.css', css.build(candidates));
+console.log('Built assets/css/site.css with Tailwind CSS and project styles.');

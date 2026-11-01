@@ -1,0 +1,8 @@
+{
+  "name": "adi-portfolio-redesign",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build:css": "node scripts/build-css.mjs" },
+  "devDependencies": { "tailwindcss": "4.1.10" }
+}
