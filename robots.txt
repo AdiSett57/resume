@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adisett57.github.io/resume/sitemap.xml
